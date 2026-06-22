@@ -1,0 +1,38 @@
+creator_name,MrBeast
+channel_url,https://www.youtube.com/@MrBeast
+niche,Entertainment & Philanthropy
+total_subscribers,330000000
+monthly_views,450000000
+total_videos,800
+avg_views_per_video,45000000
+engagement_rate,9.2
+monthly_revenue_usd,80000000
+primary_platform,YouTube
+
+video_title,views,likes,comments,watch_time_minutes,published_date
+"$1 vs $1,000,000 Hotel",180000000,8500000,420000,12.5,2024-01-15
+"Last To Leave Circle Wins $500,000",95000000,4200000,280000,18.2,2024-02-01
+"I Spent 50 Hours Buried Alive",210000000,9100000,510000,22.1,2024-02-20
+"Ages 1-100 Fight For $500,000",130000000,5800000,360000,15.8,2024-03-05
+"World's Most Dangerous Escape Room",88000000,3900000,240000,19.4,2024-03-18
+
+audience_segment,percentage
+Ages 13-17,28
+Ages 18-24,35
+Ages 25-34,22
+Ages 35+,15
+
+revenue_source,monthly_usd
+YouTube AdSense,4500000
+Brand Sponsorships,35000000
+Merchandise,18000000
+MrBeast Burger,12000000
+Feastables,10000000
+
+monthly_growth,subscribers_gained
+January,8500000
+February,7200000
+March,9100000
+April,6800000
+May,11200000
+June,9500000

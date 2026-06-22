@@ -1,0 +1,37 @@
+creator_name,Marques Brownlee (MKBHD)
+channel_url,https://www.youtube.com/@mkbhd
+niche,Tech Reviews & Consumer Electronics
+total_subscribers,18500000
+monthly_views,28000000
+total_videos,1600
+avg_views_per_video,3200000
+engagement_rate,7.8
+monthly_revenue_usd,480000
+primary_platform,YouTube
+
+video_title,views,likes,comments,watch_time_minutes,published_date
+"I Switched to Vision Pro for 2 Weeks",12000000,520000,38000,14.2,2024-01-22
+"The Best Smartphone of 2024",9500000,410000,29000,18.6,2024-02-10
+"Tesla Cybertruck: 6 Month Review",14200000,630000,52000,22.4,2024-02-28
+"Apple Intelligence: Honest Review",8800000,380000,24000,11.8,2024-03-12
+"The $4000 Samsung Galaxy Ring Review",7200000,310000,18000,9.5,2024-03-25
+
+audience_segment,percentage
+Tech Enthusiasts,38
+Professionals & Developers,28
+Students,20
+General Consumers,14
+
+revenue_source,monthly_usd
+YouTube AdSense,120000
+Brand Sponsorships,280000
+Merch (Studio MKBHD),45000
+Podcast Sponsorships,35000
+
+monthly_growth,subscribers_gained
+January,180000
+February,210000
+March,155000
+April,225000
+May,195000
+June,240000

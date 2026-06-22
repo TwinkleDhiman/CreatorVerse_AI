@@ -1,0 +1,37 @@
+creator_name,Veritasium (Derek Muller)
+channel_url,https://www.youtube.com/@veritasium
+niche,Science & Education
+total_subscribers,16800000
+monthly_views,22000000
+total_videos,310
+avg_views_per_video,8500000
+engagement_rate,11.4
+monthly_revenue_usd,320000
+primary_platform,YouTube
+
+video_title,views,likes,comments,watch_time_minutes,published_date
+"The Bizarre Behavior of Rotating Bodies",32000000,980000,45000,18.5,2024-01-08
+"Why Machines That Bend Are Better",28500000,850000,38000,16.2,2024-01-30
+"The Discovery That Transformed Pi",19200000,720000,29000,22.8,2024-02-18
+"Engineering with Origami",24800000,810000,33000,14.6,2024-03-04
+"How Electricity Actually Works",41000000,1200000,62000,28.4,2024-03-22
+
+audience_segment,percentage
+Students & Academics,42
+STEM Professionals,30
+Curious Generalists,18
+Educators,10
+
+revenue_source,monthly_usd
+YouTube AdSense,95000
+Online Course (Elements),140000
+Brand Sponsorships,65000
+Patreon,20000
+
+monthly_growth,subscribers_gained
+January,95000
+February,82000
+March,118000
+April,105000
+May,92000
+June,135000

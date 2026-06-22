@@ -1,0 +1,123 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String          @id @default(uuid())
+  name           String
+  email          String          @unique
+  creatorProfile CreatorProfile?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+}
+
+model CreatorProfile {
+  id           String   @id @default(uuid())
+  userId       String   @unique
+  user         User     @relation(fields: [userId], references: [id])
+  niche        String?
+  contentStyle String?
+  expertise    String?
+  personality  String?
+  audienceType String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  posts        CreatorPost[]
+  personas     AudiencePersona[]
+  opportunities Opportunity[]
+  simulations  Simulation[]
+  recommendations Recommendation[]
+  analyses     PlatformAnalysis[]
+  dna          CreatorDNA?
+}
+
+model CreatorPost {
+  id               String         @id @default(uuid())
+  creatorProfileId String
+  creatorProfile   CreatorProfile @relation(fields: [creatorProfileId], references: [id])
+  content          String
+  type             String         // e.g., 'post', 'video_transcript', 'bio'
+  createdAt        DateTime       @default(now())
+}
+
+model AudiencePersona {
+  id               String         @id @default(uuid())
+  creatorProfileId String
+  creatorProfile   CreatorProfile @relation(fields: [creatorProfileId], references: [id])
+  name             String         // e.g., 'Student Persona'
+  goals            String         // JSON string array
+  painPoints       String         // JSON string array
+  createdAt        DateTime       @default(now())
+}
+
+model Opportunity {
+  id               String         @id @default(uuid())
+  creatorProfileId String
+  creatorProfile   CreatorProfile @relation(fields: [creatorProfileId], references: [id])
+  title            String
+  description      String
+  demandScore      Int
+  type             String         // e.g., 'course', 'newsletter'
+  createdAt        DateTime       @default(now())
+}
+
+model Simulation {
+  id               String         @id @default(uuid())
+  creatorProfileId String
+  creatorProfile   CreatorProfile @relation(fields: [creatorProfileId], references: [id])
+  action           String         // e.g., 'Launch a Course'
+  bestRevenue      String
+  bestGrowth       String
+  expectedRevenue  String
+  expectedGrowth   String
+  worstRevenue     String
+  worstGrowth      String
+  createdAt        DateTime       @default(now())
+}
+
+model Recommendation {
+  id               String         @id @default(uuid())
+  creatorProfileId String
+  creatorProfile   CreatorProfile @relation(fields: [creatorProfileId], references: [id])
+  question         String
+  recommendation   String
+  confidenceScore  Int
+  projectedRevenue String
+  risks            String         // JSON string array
+  createdAt        DateTime       @default(now())
+}
+
+model PlatformAnalysis {
+  id               String         @id @default(uuid())
+  creatorProfileId String
+  creatorProfile   CreatorProfile @relation(fields: [creatorProfileId], references: [id])
+  platform         String         // 'youtube', 'instagram', 'linkedin', 'x'
+  sourceUrl        String
+  analysisData     String         // JSON string
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  cacheExpiry      DateTime
+
+  @@unique([creatorProfileId, platform])
+}
+
+model CreatorDNA {
+  id               String         @id @default(uuid())
+  creatorProfileId String         @unique
+  creatorProfile   CreatorProfile @relation(fields: [creatorProfileId], references: [id])
+  primaryNiche     String
+  secondaryNiche   String
+  contentStyle     String
+  audienceType     String
+  healthScore      Int
+  brandPotential   String
+  growthMomentum   String
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+}
